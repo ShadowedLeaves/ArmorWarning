@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "armor-warning",
+	"version": "${version}",
+	"name": "Armor Warning",
+	"description": "Warns the player when a piece of armor is removed from its slot.",
+	"authors": [
+		"ShadowedLeaves"
+	],
+	"contact": {
+		"sources": "https://github.com/ShadowedLeaves/ArmorWarning"
+	},
+	"license": "MIT",
+	"icon": "assets/armor-warning/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.shadowedleaves.armorwarning.ArmorWarning"
+		]
+	},
+	"mixins": [],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
