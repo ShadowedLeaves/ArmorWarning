@@ -19,6 +19,10 @@ public final class ArmorWarningClient implements ClientModInitializer {
 	};
 	private static final String[] SLOT_LABELS = { "Helmet", "Chestplate", "Leggings", "Boots" };
 
+	private static final int TITLE_FADE_IN_TICKS = 0;
+	private static final int TITLE_STAY_TICKS = 10;
+	private static final int TITLE_FADE_OUT_TICKS = 0;
+
 	private LocalPlayer trackedPlayer;
 	private final ItemStack[] lastArmor = { ItemStack.EMPTY, ItemStack.EMPTY, ItemStack.EMPTY, ItemStack.EMPTY };
 	private boolean snapshotReady;
@@ -63,7 +67,7 @@ public final class ArmorWarningClient implements ClientModInitializer {
 	private static void showWarning(Minecraft client, String armorLabel) {
 		var gui = client.gui;
 		gui.clearTitles();
-		gui.setTimes(10, 70, 20);
+		gui.setTimes(TITLE_FADE_IN_TICKS, TITLE_STAY_TICKS, TITLE_FADE_OUT_TICKS);
 		gui.setTitle(Component.literal("⚠ Warning! ⚠").withStyle(ChatFormatting.RED, ChatFormatting.BOLD));
 		gui.setSubtitle(Component.literal(armorLabel).withStyle(ChatFormatting.RED));
 	}
