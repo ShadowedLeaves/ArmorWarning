@@ -1,0 +1,23 @@
+{
+	"schemaVersion": 1,
+	"id": "armorwarning",
+	"version": "${version}",
+	"name": "Armor Warning",
+	"description": "Warns the player when an armor piece is unequipped",
+	"authors": [
+		"ShadowedLeaves"
+	],
+	"license": "MIT",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"com.shadowedleaves.armorwarning.ArmorWarningClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.16.0",
+		"minecraft": ">=1.21 <=1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
